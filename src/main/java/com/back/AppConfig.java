@@ -1,5 +1,6 @@
 package com.back;
 
+import org.springframework.boot.ApplicationRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -23,4 +24,21 @@ public class AppConfig {
         return 100;
     }
 
+//    @Bean
+//    public ApplicationRunner myApplicationRunner() {
+//        return new MyApplicationRunner();
+//    }
+
+    @Bean
+    public ApplicationRunner myApplicationRunner() {
+        return args -> {
+            System.out.println("MyApplicationRunner is running");
+        };
+    }
+
+//    @Bean
+//    public ArrayList<Integer> numbers() {
+//        System.out.println("numbers 빈이 생성되었습니다.");
+//        return new ArrayList(List.of(1,2,3));
+//    }
 }
